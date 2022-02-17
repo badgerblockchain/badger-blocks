@@ -36,6 +36,7 @@ The **goal** of the game is to level up your badger to a given level as fsat as 
 
 Please refer to the [introductory guide](https://github.com/badgerblockchain/development-guide/blob/main/introduction.md) in the [development guide](https://github.com/badgerblockchain/development-guide) to set up your environment.
 
+TODO
 
 ## Author(s)
 
