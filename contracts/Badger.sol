@@ -39,7 +39,7 @@ contract Badger is ERC721 {
     * @notice Creates a level 0 badger object and assigns it to the sender if they dont have a badger    
     */
     function createBadger(string memory name) external {
- 
+        
     }
 
     /**
@@ -72,6 +72,32 @@ contract Badger is ERC721 {
 
 
     /*///////////////////////////////////////////////////////////////////
+                            ERC721 (NFT) FUNCTIONS                                           
+    ///////////////////////////////////////////////////////////////////*/
+
+
+    /**
+    * @\
+    * @notice Assign a badger to a new owner, can be called by the current owner or someone they delegated to
+    */
+    function transferFrom(
+        address _from,
+        address _to, 
+        uint256 _tokenId
+        ) external override payable {
+
+    }
+
+
+    function approve(
+        address _approved, 
+        uint256 _tokenId
+        ) public override payable (_tokenId) { 
+
+    }
+
+
+    /*///////////////////////////////////////////////////////////////////
                              XP CALCULATIONS                                           
     ///////////////////////////////////////////////////////////////////*/
 
@@ -98,32 +124,5 @@ contract Badger is ERC721 {
 
     }
     
-
-
-    /*///////////////////////////////////////////////////////////////////
-                            ERC721 (NFT) FUNCTIONS                                           
-    ///////////////////////////////////////////////////////////////////*/
-
-
-    /**
-    * @\
-    * @notice Assign a badger to a new owner, can be called by the current owner or someone they delegated to
-    */
-    function transferFrom(
-        address _from,
-        address _to, 
-        uint256 _tokenId
-        ) external override payable {
-
-    }
-
-
-    function approve(
-        address _approved, 
-        uint256 _tokenId
-        ) public override payable (_tokenId) { 
-
-    }
-
 
 }
