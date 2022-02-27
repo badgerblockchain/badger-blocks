@@ -23,34 +23,30 @@ contract Badger is ERC721 {
 
     
     // All badger tokens in game
-    BadgerToken[] public badgers;
 
-    // TODO is this struct packed enough?? 
+  
     struct BadgerToken {
 
     }
 
 
 
-    modifier OnlyOwner(uint256 _badgerId) {
-
-	}
-
     /*///////////////////////////////////////////////////////////////////
                              BADGER FUNCTIONS                                           
     ///////////////////////////////////////////////////////////////////*/
 
-    // Changed event name 
-    // @dev There is a def diff betweren mint and transfer but not in here
+    /**
+    * @notice Creates a level 0 badger object and assigns it to the sender if they dont have a badger    
+    */
     function createBadger(string memory name) external {
  
     }
 
-    /*
-        grabs badger info for frontend to see
+    /**
+    * @notice Gets and returns a badger object by a given badger id
     */
     function getBadger(uint256 _badgerId) 
-    external view returns( uint8 level, uint8 xp, string memory name ) {
+    external view returns(  ) {
 
     }
 
@@ -59,13 +55,17 @@ contract Badger is ERC721 {
                              INTERNAL MINT & BURN                                            
     ///////////////////////////////////////////////////////////////////*/
 
-    //
+    /**
+    * @notice Creates the new basdger and assigns it to the sender 
+    */
     function _mint(address _to, uint256 _tokenId) internal override {
 
     }
 
     
-    //
+    /**
+    * @notice Removes the token, effectively deleting it 
+    */
     function _burn(uint256 _tokenId) internal override {
 
     }
@@ -75,7 +75,7 @@ contract Badger is ERC721 {
                              XP CALCULATIONS                                           
     ///////////////////////////////////////////////////////////////////*/
 
-    // changed to public 
+    // 
     function _calculateXp(uint8 _level) public view returns(uint8) {
 
     }
@@ -104,6 +104,11 @@ contract Badger is ERC721 {
                             ERC721 (NFT) FUNCTIONS                                           
     ///////////////////////////////////////////////////////////////////*/
 
+
+    /**
+    * @\
+    * @notice Assign a badger to a new owner, can be called by the current owner or someone they delegated to
+    */
     function transferFrom(
         address _from,
         address _to, 
@@ -116,7 +121,7 @@ contract Badger is ERC721 {
     function approve(
         address _approved, 
         uint256 _tokenId
-        ) public override payable onlyOwnerOf(_tokenId) { 
+        ) public override payable (_tokenId) { 
 
     }
 
